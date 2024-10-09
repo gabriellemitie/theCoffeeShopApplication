@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker ,declarative_base
 
 
 # criando o local do nosso db, estara nesse diretorio
-SQLALCHEMY_DATABASE_URL = 'mysql+pymysql://root:senha123@127.0.0.1:3306/coffeeShop' # fazendo a conexao com o nosso bd
+SQLALCHEMY_DATABASE_URL = 'mysql+pymysql://root:seuenderecoelogin/coffeeShop' # fazendo a conexao com o nosso bd
 
 # criando mecanismo para o app -> abrir conexao com o db
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
