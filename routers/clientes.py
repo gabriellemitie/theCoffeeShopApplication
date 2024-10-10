@@ -39,7 +39,7 @@ class UserVerification(BaseModel):
     password: str
     new_password: str = Field(min_length=6) # field serve para 'formatar' o tipo do dado, no caso estamos especificando que a senha tem que ter no minimo 6 caracteres
 
-# # obtendo o cliente atual command + / -> copmenta tudo
+# obtendo o cliente atual 
 @router.get('/', status_code=status.HTTP_200_OK)
 async def get_client (user: user_dependency, db: db_dependency):
     if user is None:
