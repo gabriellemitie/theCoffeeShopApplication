@@ -6,11 +6,7 @@
 - Conexão com banco de dados local usando _sqlalchemy_  
 - Criptografia de senhas  
 - Lançamento de erros do tipo HTTPException
-
-
-⚠️   Atenção ⚠️  
-Não foram feitas páginas web pois o objetivo do projeto era trabalhar especificamente com api, portanto a parte de visualização ficou somente na página própria que o FastApi gera.  
-
+- Uso do MySQLWorkbench
 
 
 
