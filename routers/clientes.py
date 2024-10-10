@@ -47,7 +47,7 @@ async def get_client (user: user_dependency, db: db_dependency):
     return db.query(Users).filter(Users.id == user.get('id')).first() # consulta no bd e retornando somente o primeiro resultado
 
 # alterando a senha
-@router.post('/password', status_code=status.HTTP_204_NO_CONTENT)
+@router.post('/password', status_code=status.HTTP_201_CREATED)
 async def change_password(user: user_dependency, db: db_dependency, user_verification: UserVerification):
     if user is None:
         raise HTTPException(status_code=401, detail='Autenticação falhou.')
@@ -62,3 +62,5 @@ async def change_password(user: user_dependency, db: db_dependency, user_verific
     db.add(user_model)
     # fazendo o commit
     db.commit()
+
+    return {"Senha alterada com sucesso!"}
