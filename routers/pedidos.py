@@ -79,7 +79,7 @@ async def create_order(user: user_dependency, db: db_dependency, order_request: 
     db.refresh(order_model)
 
     # inserindo os itens que existem mesmo no cardapio no banco
-    # isso garante que nao se criem pedidos vazio,s poluindo o banco
+    # isso garante que nao se criem pedidos vazios poluindo o banco
     for valid_item in valid_items:
         item_order_model = OrderItems(
             order_id=order_model.order_id,
