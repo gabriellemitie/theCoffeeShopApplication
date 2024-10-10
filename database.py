@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker ,declarative_base
 
 
 
-# criando o local do nosso db, estara nesse diretorio
+# criando o local do nosso db
 SQLALCHEMY_DATABASE_URL = 'mysql+pymysql://root:suasenha@0.0.0.0:porta/seubancodedados' # fazendo a conexao com o nosso bd
 
 # criando mecanismo para o app -> abrir conexao com o db
