@@ -16,8 +16,8 @@ router = APIRouter(
     tags=['auth']
 )
 
-# gerando uma secret key
-SECRET_KEY = 'da37459bca62dc6f43b0119cf004fcc11a4c89a818fd8f5c933748bb17ac77e5'
+# gerando uma secret key -> openssl rand -hex 32
+SECRET_KEY = 'senhasecreta'
 ALGORITHM = 'HS256'
 
 # tratamento de segurança das senhas
